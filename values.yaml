@@ -1,8 +1,8 @@
 oap:
   name: skywalking-oap
   image:
-    repository: skywalking/oap
-    tag: 6.0.0-GA
+    repository: apache/skywalking-oap-server
+    tag: 6.3.0
     pullPolicy: IfNotPresent
   ports:
     grpc: 11800
@@ -28,8 +28,8 @@ ui:
   name: skywalking-ui
   replicas: 1
   image:
-    repository: skywalking/ui
-    tag: 6.0.0-GA
+    repository: apache/skywalking-ui
+    tag: 6.3.0
     pullPolicy: IfNotPresent
   ports:
     page: 8080
@@ -65,9 +65,9 @@ nameOverride: ""
 fullnameOverride: ""
 
 sw:
-  storage: h2
+  storage: elasticsearch
   es:
     clusterNodes: 127.0.0.1:9200
-    nameSpace: development
+    nameSpace: sw_
     user:
     password:

@@ -551,3 +551,165 @@ data:
       Npgsql.EntityFrameworkCore.PostgreSQL: PostgreSQL
       transport-client: Elasticsearch
       SolrJ: Solr
+
+  scope-meta.yml: |-
+    scopes:
+      - name: All
+      - name: Service
+        columns:
+          - fieldName: entityId
+            columnName: entity_id
+            typeName: java.lang.String
+            ID: true
+      - name: ServiceInstance
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
+      - name: Endpoint
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
+        - fieldName: serviceInstanceId
+          columnName: service_instance_id
+          typeName: int
+          ID: false
+      - name: ServiceInstanceJVMCPU
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
+      - name: ServiceInstanceJVMMemory
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
+      - name: ServiceInstanceJVMMemoryPool
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
+      - name: ServiceInstanceJVMGC
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
+      - name: ServiceRelation
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+      - name: ServiceInstanceRelation
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: sourceServiceId
+          columnName: source_service_id
+          typeName: int
+          ID: false
+        - fieldName: destServiceId
+          columnName: dest_service_id
+          typeName: int
+          ID: false
+      - name: EndpointRelation
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
+        - fieldName: childServiceId
+          columnName: child_service_id
+          typeName: int
+          ID: false
+        - fieldName: serviceInstanceId
+          columnName: service_instance_id
+          typeName: int
+          ID: false
+        - fieldName: childServiceInstanceId
+          columnName: child_service_instance_id
+          typeName: int
+          ID: false
+      - name: DatabaseAccess
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+      - name: ServiceInstanceCLRCPU
+        columns:
+          - fieldName: entityId
+            columnName: entity_id
+            typeName: java.lang.String
+            ID: true
+          - fieldName: serviceId
+            columnName: service_id
+            typeName: int
+            ID: false
+      - name: ServiceInstanceCLRGC
+        columns:
+          - fieldName: entityId
+            columnName: entity_id
+            typeName: java.lang.String
+            ID: true
+          - fieldName: serviceId
+            columnName: service_id
+            typeName: int
+            ID: false
+      - name: ServiceInstanceCLRThread
+        columns:
+          - fieldName: entityId
+            columnName: entity_id
+            typeName: java.lang.String
+            ID: true
+          - fieldName: serviceId
+            columnName: service_id
+            typeName: int
+            ID: false
+      - name: EnvoyInstanceMetric
+        columns:
+        - fieldName: entityId
+          columnName: entity_id
+          typeName: java.lang.String
+          ID: true
+        - fieldName: serviceId
+          columnName: service_id
+          typeName: int
+          ID: false
